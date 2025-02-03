@@ -1,0 +1,132 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+
+# Arquivos do Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Arquivos do Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.metadata/
+bin/
+tmp/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs e arquivos temporários
+logs/
+*.log
+hs_err_pid*
+dump/
+
+# Configurações locais
+application-*.yml
+application-*.properties
+.env
+
+
+# Diretórios de build do Gradle
+.gradle/
+build/
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Arquivos de cache do Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs e depuração
+logs/
+*.log
+*.out
+*.err
+hs_err_pid*
+heapdump.hprof
+
+# Arquivos do IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Arquivos do Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários do Spring Boot
+*.war
+*.jar
+
+# Configurações locais (credenciais, variáveis de ambiente)
+.env
+application-*.yml
+application-*.properties
