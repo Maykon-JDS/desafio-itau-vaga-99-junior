@@ -20,11 +20,19 @@ public class EstatisticasService {
 	
 	public EstatisticasResponseDTO calcularEstatisticasTransacoes(Integer intervaloBusca) {
 		
+		log.info("Iniciada busca de estatísticas de transações pelo período de tempo " + intervaloBusca.toString());
 		List<TransacaoRequestDTO> transacoes = trasacaoService.buscarTransacoes(intervaloBusca);
+		
+		if (transacoes.isEmpty()) {
+			return new EstatisticasResponseDTO(0L, 0.0, 0.0, 0.0, 0.0);
+		}
 		
 		DoubleSummaryStatistics estatisticasTrasacoes = transacoes.stream()
 																	.mapToDouble(TransacaoRequestDTO::valor)
 																		.summaryStatistics();
+		log.info("Estatísticas retornadas com sucesso");
+		
+		
 		
 		return new EstatisticasResponseDTO(
 								estatisticasTrasacoes.getCount(), 
