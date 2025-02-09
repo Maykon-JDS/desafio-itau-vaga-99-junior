@@ -61,7 +61,7 @@ cd desafio-itau-vaga-99-junior/
 docker compose -f ./docker/docker-compose.yml build
 ```
 
-1. Inicie os containers Docker
+5. Inicie os containers Docker
    - Inicialize os containers para executar o projeto:
 
 ```bash
