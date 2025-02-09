@@ -4,7 +4,6 @@
 
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](./LICENSE)
 [![Openapi](https://img.shields.io/badge/openapi-3.1-green?logo=openapi)](https://swagger.io/specification/)
-<!-- [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org) -->
 
 ## Sumário
 - [Itaú Unibanco - Desafio de Programação](#itaú-unibanco---desafio-de-programação)
@@ -23,9 +22,6 @@
 ![Eclipse](https://img.shields.io/badge/Eclipse%20IDE-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white)&nbsp;
 ![Docker](https://img.shields.io/badge/Docker-0895e7?style=for-the-badge&logo=Docker&logoColor=white)&nbsp;
 
-<!-- ## Estrutura do Projeto
-Para entender a estrutura do projeto, consulte [Estrutura do Projeto](link_para_o_documentacao_estrutura.md). -->
-
 ## Descrição do Desafio
 
 > Sua missão, caso você aceite, é criar uma API REST que recebe Transações e retorna Estatísticas sob essas transações. Para este desafio, a API deve ser criada utilizando-se de Java ou [Kotlin](https://kotlinlang.org/) e Spring Boot.
@@ -41,32 +37,36 @@ Para entender a estrutura do projeto, consulte [Estrutura do Projeto](link_para_
 
 ### Rodando o Projeto
 
-1. Choose a directory to clone the project's repository
-    - Select a directory on your system where you want to download the project files (e.g., `~/projects`).
+1. Escolha um diretório para clonar o projeto
+    - Selecione um diretório em seu sistema operaional onde deseja baixar os arquivos do projeto (ex: `~/projects`).
 
-2. Clone the project repository:
-    - Run the following command in your terminal:
-
-```bash
-git clone https://github.com/Maykon-JDS/converter.git
-```
-3. Navigate to the project root directory
-    - Access the project root directory with the terminal:
+2. Clone o projeto:
+    - Rode o seguinte comando no seu terminal:
 
 ```bash
-cd converter
+git clone https://github.com/Maykon-JDS/desafio-itau-vaga-99-junior.git
 ```
-4. Build the Docker containers
-   - Use Docker Compose to build the project's environment:
+
+3. Navegue até o diretório raiz do projeto
+   - Acesse o diretório raiz do projeto pelo terminal:
+
+```bash
+cd desafio-itau-vaga-99-junior/
+```
+
+4. Construa os containers Docker
+   - Use o Docker Compose para construir os containers do projeto:
 
 ```bash
 docker compose -f ./docker/docker-compose.yml build
 ```
-5. Start the Docker containers
-   - Initialize the containers to run the project:
+
+1. Inicie os containers Docker
+   - Inicialize os containers para executar o projeto:
 
 ```bash
-docker compose -f ./docker/docker-compose.yml up
+docker compose -f ./docker/docker-compose.yml up -d
 ```
-6. Open your browser and navigate to the project URL
-   - Access the project in your browser: `127.0.0.1:8001`
+
+6. Abra seu navegador e navegue até a URL da documentação da API do projeto:
+   - Acesse o projeto no navegador: [`http://localhost:8080/swagger-ui/index.html`](http://localhost:8080/swagger-ui/index.html)

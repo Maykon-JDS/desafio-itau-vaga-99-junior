@@ -1,0 +1,16 @@
+name: desafio-itau-vaga-99-junior
+services:
+  transacao-api:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+      tags:
+        - "transacao-api:latest"
+        - "transacao-api:1.0.0"
+    ports:
+      - "8080:8080"
+    networks:
+      - desafio-itau-vaga-99-junior
+networks:
+  desafio-itau-vaga-99-junior:
+    driver: bridge
