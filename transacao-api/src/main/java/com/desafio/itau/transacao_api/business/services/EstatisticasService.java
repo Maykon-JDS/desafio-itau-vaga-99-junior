@@ -15,27 +15,27 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 public class EstatisticasService {
-	
+
 	public final TransacaoService trasacaoService;
-	
+
 	public EstatisticasResponseDTO calcularEstatisticasTransacoes(Integer intervaloBusca) {
-		
-		log.info("Iniciada busca de estatísticas de transações pelo período de tempo " + intervaloBusca.toString());
+
+		log.info("Iniciada busca de estatisticas de transacoes pelo periodo de tempo " + intervaloBusca.toString());
 		List<TransacaoRequestDTO> transacoes = trasacaoService.buscarTransacoes(intervaloBusca);
-		
+
 		if (transacoes.isEmpty()) {
 			return new EstatisticasResponseDTO(0L, 0.0, 0.0, 0.0, 0.0);
 		}
-		
+
 		DoubleSummaryStatistics estatisticasTrasacoes = transacoes.stream()
 																	.mapToDouble(TransacaoRequestDTO::valor)
 																		.summaryStatistics();
-		log.info("Estatísticas retornadas com sucesso");
-		
-		
-		
+		log.info("Estatisticas retornadas com sucesso");
+
+
+
 		return new EstatisticasResponseDTO(
-								estatisticasTrasacoes.getCount(), 
+								estatisticasTrasacoes.getCount(),
 								estatisticasTrasacoes.getSum(),
 								estatisticasTrasacoes.getAverage(),
 								estatisticasTrasacoes.getMin(),
