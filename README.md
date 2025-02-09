@@ -13,6 +13,8 @@
   - [Como Executar o Projeto](#como-executar-o-projeto)
     - [Requisitos para Executar o Projeto](#requisitos-para-executar-o-projeto)
     - [Rodando o Projeto](#rodando-o-projeto)
+  - [Aprendizados](#aprendizados)
+  - [Referência](#referência)
 
 ## Tecnologias Utilizadas
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)&nbsp;
@@ -70,3 +72,18 @@ docker compose -f ./docker/docker-compose.yml up -d
 
 6. Abra seu navegador e navegue até a URL da documentação da API do projeto:
    - Acesse o projeto no navegador: [`http://localhost:8080/swagger-ui/index.html`](http://localhost:8080/swagger-ui/index.html)
+
+## Aprendizados
+
+Neste projeto, apliquei diversos conhecimentos adquiridos ao longo do desenvolvimento, incluindo a utilização de **Multi-stage builds no Docker**, o que permitiu otimizar a construção da imagem, reduzindo seu tamanho e melhorando a eficiência do deployment.
+
+Também trabalhei com o **Gradle** para gerenciar dependências e compilar o projeto de forma eficiente, garantindo uma melhor organização e automação do build. Durante o processo, aprofundei meus conhecimentos na **compilação de um projeto Spring Boot**, compreendendo melhor a estrutura do framework e suas configurações.
+
+Outro ponto importante foi a utilização do **Spring Boot Actuator**, que proporcionou uma maneira prática de monitorar e gerenciar a aplicação em tempo real. Além disso, implementei **logs utilizando SLF4J**, garantindo um registro eficiente das operações do sistema para facilitar a depuração e a manutenção.
+
+Por fim, explorei a **utilização de anotações no Spring**, aproveitando sua capacidade de simplificar a configuração e a injeção de dependências, tornando o código mais limpo e modular.
+
+Esses aprendizados foram fundamentais para aprimorar a arquitetura e a eficiência do projeto, proporcionando uma aplicação robusta e bem estruturada.
+
+## Referência
+ - [Repositório do Desafio](https://github.com/rafaellins-itau/desafio-itau-vaga-99-junior)
