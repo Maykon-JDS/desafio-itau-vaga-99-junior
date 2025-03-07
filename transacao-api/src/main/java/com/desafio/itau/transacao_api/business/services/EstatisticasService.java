@@ -21,6 +21,10 @@ public class EstatisticasService {
 	public EstatisticasResponseDTO calcularEstatisticasTransacoes(Integer intervaloBusca) {
 
 		log.info("Iniciada busca de estatisticas de transacoes pelo periodo de tempo " + intervaloBusca.toString());
+
+		long start = System.currentTimeMillis();
+
+		// Dependencia que é injetada pelo lombok (@RequiredArgsConstructor)
 		List<TransacaoRequestDTO> transacoes = trasacaoService.buscarTransacoes(intervaloBusca);
 
 		if (transacoes.isEmpty()) {
@@ -30,9 +34,14 @@ public class EstatisticasService {
 		DoubleSummaryStatistics estatisticasTrasacoes = transacoes.stream()
 																	.mapToDouble(TransacaoRequestDTO::valor)
 																		.summaryStatistics();
+
+		long finish = System.currentTimeMillis();
+
+		long tempoRequisicao = finish - start;
+
+		System.out.println("Tempo de requisição: " + tempoRequisicao);
+
 		log.info("Estatisticas retornadas com sucesso");
-
-
 
 		return new EstatisticasResponseDTO(
 								estatisticasTrasacoes.getCount(),
